@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./diseño.css">
+    <style>
+        #imageContainer {
+            width: 300px;
+            height: 300px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <title>Te</title>
+    
+</head>
+<body>
+    <div id="obal">
+        <canvas id="c"></canvas>
+        <script>
+          var b = document.body;
+          var c = document.getElementsByTagName('canvas')[0];
+          var a = c.getContext('2d');
+          document.body.clientWidth; 
+        </script>
+    </div>
+    <div id="container">
+        <canvas id="canvas-left"></canvas>
+        <canvas id="canvas-right"></canvas>
+    </div>
+    
+    
+    <body>
+        <div class="greetings">
+    
+            
+            <span>Para</span>
+            <span></span>
+            <span>Mi</span>
+            <span>Chiquita</span>
+            <span>Hermosa</span>
+        </div>
+        <div class="greetings">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="description">
+            <span>Te adoro <3 !!!</span>
+        </div>
+
+
+
+        <div id="imageContainer">
+            <img id="slideshow" src="1.jpg" alt="Slideshow">
+        </div>
+        <div class="button"> 
+            <button onclick="prevImage()">Anterior</button>
+            <button onclick="nextImage()">Siguiente</button>
+        </div>
+        
+
+
+        <div class="button">
+            <button>
+                <a onclick="checkRedirect()">❤️</a>
+            </button>
+        </div>
+    </body>
+
+    <script src="function-heart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
