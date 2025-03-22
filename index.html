@@ -19,6 +19,7 @@
     
 </head>
 <body>
+    <audio id="myAudio" src="cancion.mp3" loop autoplay></audio>
     <div id="obal">
         <canvas id="c"></canvas>
         <script>
@@ -77,7 +78,22 @@
             </button>
         </div>
     </body>
+    
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("myAudio");
+            audio.volume = 0.02; // Volumen inicial bajo
+    
+            // Esperar a que el usuario interactúe con la página
+            document.body.addEventListener("click", function () {
+                if (audio.paused) {
+                    audio.play().catch(error => console.log("Error al reproducir:", error));
+                }
+            }, { once: true }); // Solo se ejecuta una vez
+        });
+    </script>
+    
     <script src="function-heart.js"></script>
     <script src="script.js"></script>
 </body>

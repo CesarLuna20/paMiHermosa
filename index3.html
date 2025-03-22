@@ -51,8 +51,25 @@
                     <p>yo</p>
                  </div>
             </div>
+
         </div>
+
+        <audio id="myAudio" src="cancion2.mp3" loop autoplay></audio>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const audio = document.getElementById("myAudio");
+                audio.volume = 0.02; // Volumen inicial bajo
         
+                // Esperar a que el usuario interactúe con la página
+                document.body.addEventListener("click", function () {
+                    if (audio.paused) {
+                        audio.play().catch(error => console.log("Error al reproducir:", error));
+                    }
+                }, { once: true }); // Solo se ejecuta una vez
+            });
+        </script>
+
         <script src="jquery.js"></script>
         <script src="jquery2.1.js"></script>
         <script defer src="valentine-confession.js"></script>
